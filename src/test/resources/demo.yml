@@ -1,0 +1,51 @@
+# Execution has several options to set load profile settings
+# concurrency - number of target concurrent virtual users
+# ramp-up - ramp-up time to reach target concurrency
+# hold-for - time to hold target concurrency
+# iterations - limit scenario iterations number
+# scenario - name of scenario that described in scenarios
+
+# please note that the baseUrl is https://nhsd.metadata.org.uk. if you want to run them on a different Url, navigate to any dummy.jmx and change the url from <stringProp name="HTTPSampler.domain">nhsd.metadata.org.uk/</stringProp>.
+execution:
+- iterations: 1
+  concurrency: 2
+  scenario: demo2
+
+- iterations: 1
+  concurrency: 4
+  scenario: demo1 # this is the scenarios name
+
+
+scenarios:
+    demo2: # Provide the scenario name
+      script: C:\performance\ModelCatalogueCorePerformanceTestApp\src\test\jmeter\demo2.jmx # provide the path of your script
+    demo1:
+      script: C:\performance\ModelCatalogueCorePerformanceTestApp\src\test\jmeter\demo1.jmx
+
+
+reporting:
+- module: blazemeter
+
+
+# you can generate a junit.xml report as below
+
+#reporting:
+#- module: junit-xml
+#  filename: /path_to_file/file.xml (full path to report file)
+#  data-source: pass-fail  (which data source to use: sample-labels or pass-fail)
+
+# or a Pass/Fail report please visit this page for more information https://gettaurus.org/docs/PassFail/
+
+
+# Please note that all the runnable scripts are in this form TaurusScriptExample.yml
+# please view the link for more information https://gettaurus.org/docs/YAMLTutorial/
+
+
+# How to run your script
+# Open your Terminal
+# Navigate to resources directory
+#  run this command ( bzt demo.yml)
+
+
+
+# Make sure you add  jmeter and csv plugin on intellij Idea

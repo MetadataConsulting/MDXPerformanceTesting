@@ -1,0 +1,59 @@
+execution:
+- iterations: 1
+  concurrency: 1000
+  scenario: CreateDataClass
+
+- iterations: 1
+  concurrency: 500
+  scenario: CreateDataClassAndElements
+
+- iterations: 1
+  concurrency: 500
+  scenario: CreateDataModel
+
+
+- iterations: 2
+  concurrency: 1000
+  scenario: CreateDataModelAndEdit
+
+
+
+- iterations: 1
+  concurrency: 500
+  scenario: CreateDataTypes
+
+
+- iterations: 3
+  concurrency: 150
+  scenario: CreateElements
+
+
+
+scenarios:
+  CreateDataClass:
+      script: C:\performance\ModelCatalogueCorePerformanceTestApp\src\test\jmeter\CreateDataClass.jmx
+  CreateDataClassAndElements:
+      script: C:\performance\ModelCatalogueCorePerformanceTestApp\src\test\jmeter\CreateDataClassAndElements.jmx
+  CreateDataModel:
+      script: C:\performance\ModelCatalogueCorePerformanceTestApp\src\test\jmeter\CreateDataModel.jmx
+  CreateDataModelAndEdit:
+      script: C:\performance\ModelCatalogueCorePerformanceTestApp\src\test\jmeter\CreateDataModelAndEdit.jmx
+  CreateDataTypes:
+      script: C:\performance\ModelCatalogueCorePerformanceTestApp\src\test\jmeter\CreateDataTypes.jmx
+  CreateElements:
+      script: C:\performance\ModelCatalogueCorePerformanceTestApp\src\test\jmeter\CreateElements.jmx
+
+
+
+reporting:
+- module: blazemeter
+
+
+
+# how to run your script
+# Open your Terminal
+# Navigate to resources directory
+#  run this command ( bzt StressTest.yml)
+
+
+# Please note that you must not run all the scripts. Select the one suitable for your task and comment the remaining scripts.

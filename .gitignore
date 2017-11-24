@@ -1,0 +1,20 @@
+**.iml
+**/.idea/**/*
+**/atlassian-ide-plugin.xml
+**/storage/**/*
+**/out/**/*
+**/target/**/*
+**/.slcache/**/*
+**/target-eclipse/**/*
+**/*.class
+**/build/**/*
+**/.gradle/**
+
+
+# OsX
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Grails asset plugin cache
+*.asscache
